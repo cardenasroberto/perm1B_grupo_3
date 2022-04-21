@@ -2,7 +2,7 @@
 Este código hace una simulación de un cajero automático, donde puedes ver tu saldo y retirar dinero.
 Lo primero que tendrá que hacer el usuario es ingresar su contraseña para poder acceder al MENÚ
 
-"Ingrese la clave: 1414
+"Ingrese la clave: 1313
 
 Ingresa la contraseña correcta:"
 
