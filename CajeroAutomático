@@ -13,14 +13,17 @@ def menu():
     print("3. Salir")
     print()  # Sirve para poder dejar un espacio entre las lineas.
     accion = int(input("Elija accion a realizar: "))
-    #La acción que va a realizar la acción 1 será la ejecución de la línea 55
+    #La acción que va a realizar la acción 1 será la ejecución de la línea 55 donde 
+    #va a ver el saldo restante 
     if accion == 1:
         verSaldo()
         input("Presione entrer para continuar")
         menu()
+    #Opción a retirar el monto ingresado
     if accion == 2:
         retiro()
         menu()
+    #Esto terminará de ejecutar el código
     if accion == 3:
         Salir()
         salir = False
@@ -28,7 +31,7 @@ def menu():
 def retiro():
     global saldo
     print()
-    print("MONTOS PERMITIDOS PARA RETIRAR E INGRESAR DINERO:")
+    print("MONTOS PERMITIDOS PARA RETIRAR DINERO:")
     print("1. S/20")
     print("2. S/50")
     print("3. S/100")
@@ -36,22 +39,23 @@ def retiro():
     print("5. S/500")
     opcion2 = int(input("Ingrese monto a retirar: "))
     retiro = int(opcion2)
-
+   
     if retiro == 0:
         print("Solo puede retirar las cantidades permitidas")
         input("Presione enter para volver al menú")
-   
 
+#Si el monto ingresado es superior al saldo imprimirá la línea 49
     elif retiro > saldo:
         print("No tiene sufiente saldo para retirar esa cantidad")
         input("Presione enter para volver al menú")
-
+#estas líneas lo que haces es que al retirar un numero entero se le descontará al saldo 
     for i in L:
         if retiro == i:
             saldo -= retiro
             print(f"Dinero total de la cuenta: {saldo}")
             input("Presione enter para volver al menú")
 
+#imprimirá el valor actual de SALDO
 def verSaldo():
 
     print("Su saldo actual es de: ", saldo)
